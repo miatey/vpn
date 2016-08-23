@@ -126,21 +126,25 @@ body { font-family: "maven-reg", sans-serif; font-size: 14px; line-height: 1; }
 .content__item, .content__item--bottom { width: 100%; margin-bottom: 12px; padding: 10px 0; background-color: #f8f9f9; border: 1px solid #e9ebeb; *zoom: 1; }
 .content__item:after, .content__item--bottom:after { content: " "; display: table; clear: both; }
 .content__item--bottom { padding: 20px; }
-.content__col-left { width: 30%; float: left; padding: 0 17px; text-align: center; }
-@media only screen and (max-width: 719px) { .content__col-left { display: block; width: 100%; } }
-.content__col-center { width: 50%; float: left; padding: 0 20px; border-left: 1px solid #e9ebeb; border-right: 1px solid #e9ebeb; }
+.content__col-left, .content__col-info { width: 30%; float: left; padding: 0 17px; text-align: center; border-right: 1px solid #e9ebeb; }
+@media only screen and (max-width: 719px) { .content__col-left, .content__col-info { display: block; width: 100%; } }
+.content__col-info { width: 32%; }
+.content__col-center { width: 50%; float: left; padding: 0 20px; margin-left: -1px; border-left: 1px solid #e9ebeb; border-right: 1px solid #e9ebeb; }
 @media only screen and (max-width: 719px) { .content__col-center { display: block; width: 100%; } }
 .content__col-right { width: 20%; float: left; text-align: center; }
 @media only screen and (max-width: 719px) { .content__col-right { width: 100%; display: block; } }
-.content__col-right-next { width: 70%; float: right; padding-right: 20px; border-left: 1px solid #e9ebeb; *zoom: 1; }
-.content__col-right-next:after { content: " "; display: table; clear: both; }
-@media only screen and (max-width: 719px) { .content__col-right-next { display: block; float: left; width: 100%; } }
+.content__col-right-next, .content__col-main { width: 70%; float: right; padding: 0 20px; *zoom: 1; }
+.content__col-right-next:after, .content__col-main:after { content: " "; display: table; clear: both; }
+@media only screen and (max-width: 719px) { .content__col-right-next, .content__col-main { display: block; float: left; width: 100%; } }
+.content__col-main { width: 68%; padding: 0 20px 0 0; }
 .content__logo, .content__logo-next { width: 100%; min-height: 110px; border-bottom: 1px solid #e9ebeb; position: relative; }
 .content__logo img, .content__logo-next img { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 230px; max-height: 100px; }
 .content__logo-next { min-height: 60px; }
 .content__logo-next img { max-height: 60px; }
 .content__progress { width: 100%; padding: 23px 0 14px 0; }
 .content__progress span { font-family: "maven-bold", sans-serif; font-size: 30px; line-height: 1; color: #bebfbf; vertical-align: top; }
+.content__progress .total { display: inline-block; padding: 3px 5px; font-family: "maven-reg", sans-serif; font-size: 12px; color: #969696; line-height: 1; }
+.content__progress .gray { color: #747474; }
 .content__view-link { width: 100%; }
 .content__view-link a { font-family: "maven-reg", sans-serif; font-size: 14px; color: #369af5; line-height: 1; }
 .content__view-link a:hover { color: #9cd60d; }
@@ -152,7 +156,6 @@ body { font-family: "maven-reg", sans-serif; font-size: 14px; line-height: 1; }
 .content__lists-next { width: 50%; float: left; }
 @media only screen and (max-width: 697px) { .content__lists-next { width: 10%; } }
 .content__lists-next .list { width: 30%; margin-right: calc(10%/3); border: none; }
-.content__transition { width: 100%; padding-bottom: 20px; }
 .content .price-wrap { width: 50%; min-height: 50px; float: right; border-left: 1px solid #e9ebeb; }
 .content__rate { width: 95px; height: 95px; overflow: hidden; position: relative; border-radius: 50%; margin: auto; background: url("../img/elips_rating.png"); text-align: center; }
 .content__rate .rate-number { position: absolute; line-height: 95px; font-family: "maven-bold", sans-serif; font-size: 80px; color: #fff; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1; }
@@ -170,16 +173,30 @@ body { font-family: "maven-reg", sans-serif; font-size: 14px; line-height: 1; }
 .content__os-logo:last-child { border-top: 1px solid #e9ebeb; border-left: 1px solid #e9ebeb; margin: -1px 0 0 -1px; }
 .content__os-logo img { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 .content__rate-list { width: 79%; float: left; border-left: 1px solid #e9ebeb; padding-left: 17px; }
-.content .rate-item { width: 100%; border-bottom: 1px solid #e9ebeb; padding: 5px 0; *zoom: 1; }
+.content .rate-item { width: 100%; border-bottom: 1px solid #e9ebeb; padding: 3px 0; *zoom: 1; }
 .content .rate-item:after { content: " "; display: table; clear: both; }
 .content .rate-item span { width: 50%; float: left; }
 .content .rate-item .rate-txt { text-align: left; font-size: 14px; font-family: "maven-med", sans-serif; color: #747474; line-height: 1.5; }
 .content .rate-item .rate-progress { text-align: right; font-size: 22px; font-family: "maven-bold", sans-serif; color: #bebfbf; }
-.content__buy { float: left; width: 100%; *zoom: 1; }
+.content__buy { float: left; width: 100%; padding: 20px 0 0 24px; position: relative; *zoom: 1; }
 .content__buy:after { content: " "; display: table; clear: both; }
-.content__lang { line-height: 31px; }
+.content__buy button { float: right; width: 165px; height: 50px; font-size: 24px; position: relative; z-index: 2; }
+.content__lang { width: 50%; float: left; text-align: left; padding-top: 10px; }
+.content__lang img { display: inline-block; vertical-align: middle; }
+.content__lang p { vertical-align: middle; display: inline-block; padding-left: 8px; line-height: 30px; font-family: "maven-med", sans-serif; font-size: 24px; color: #747474; }
+.content__lang p span { font-family: "maven-reg", sans-serif; font-size: 18px; }
+.content__buy-price { position: absolute; right: 0; top: 23px; z-index: 1; width: 50%; height: 44px; border: 1px solid #e9ebeb; border-radius: 3px; padding-left: 40px; background-color: #fff; }
+.content__buy-price span { font-family: "maven-black", sans-serif; font-size: 36px; line-height: 44px; background: -webkit-linear-gradient(bottom, #2b83d6 0%, #3699f5 100%); background: -o-linear-gradient(bottom, #2b83d6 0%, #3699f5 100%); background: linear-gradient(to top, #2b83d6 0%, #3699f5 100%); -webkit-background-clip: text; color: transparent; }
+.content__article { width: 100%; padding: 25px 0; }
+.content__article p { font-family: "maven-reg", sans-serif; font-size: 14px; color: #747474; line-height: 1.2; }
+.content__article .price-img { width: 100%; display: inline-block; padding: 20px 0; text-align: center; }
+.content__subtitle { width: 100%; padding: 17px 0; margin-top: 20px; border-top: 1px solid #e9ebeb; *zoom: 1; }
+.content__subtitle:after { content: " "; display: table; clear: both; }
+.content__subtitle img { float: left; margin-right: 10px; }
+.content__name { font-family: "maven-med", sans-serif; font-size: 22px; color: #969696; line-height: 1.2; }
+.content__post { font-family: "maven-reg", sans-serif; font-size: 14px; color: #747474; line-height: 1.2; }
 
-.sidebar { float: right; max-width: 287px; margin-left: 18px; margin-top: 17px; *zoom: 1; }
+.sidebar { float: right; max-width: 287px; margin: 17px 0 30px 18px; *zoom: 1; }
 .sidebar:after { content: " "; display: table; clear: both; }
 @media only screen and (max-width: 1200px) { .sidebar { width: 100%; margin: auto; float: none; } }
 @media only screen and (max-width: 600px) { .sidebar { max-width: none; margin-top: 19px; } }
@@ -219,7 +236,7 @@ body { font-family: "maven-reg", sans-serif; font-size: 14px; line-height: 1; }
 .sidebar .news-txt { font-size: 14px; font-family: "maven-reg", sans-serif; color: #969696; line-height: 1.286; padding-bottom: 14px; border-bottom: 1px solid #e9ebeb; }
 .sidebar .news-txt:last-child { border: none; }
 
-.footer { width: 100%; background: url("../img/footer_grey.png") center/cover no-repeat; clear: both; *zoom: 1; }
+.footer { width: 100%; background: url("../img/footer_grey.png") center/cover no-repeat; margin-top: 30px; clear: both; *zoom: 1; }
 .footer:after { content: " "; display: table; clear: both; }
 .footer__logo { width: 204px; float: left; line-height: 132px; display: inline-block; text-align: center; }
 .footer__logo span { font-size: 30px; font-family: "maven-black", sans-serif; line-height: 0.533; color: white; }
@@ -228,6 +245,5 @@ body { font-family: "maven-reg", sans-serif; font-size: 14px; line-height: 1; }
 .footer__social span { font-size: 14px; font-family: "maven-reg", sans-serif; line-height: 2.143; color: white; }
 .footer__txt { width: 377px; float: left; font-size: 12px; color: white; font-family: "maven-reg", sans-serif; line-height: 1.333; padding-top: 6px; border-left: 1px solid #5e6363; padding-left: 32px; margin-top: 27px; }
 
-.price-img { width: 100%; display: inline-block; text-align: center; }
-
-.mini-img { float: left; width: 100%; }
+.transition { width: 100%; padding-top: 20px; }
+.transition a { font-family: "maven-reg", sans-serif; font-size: 14px; color: #747474; line-height: 1; text-decoration: none; }
