@@ -121,8 +121,8 @@ body { font-family: "maven-reg", sans-serif; font-size: 14px; line-height: 1; }
 .top-rate { box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2); }
 
 .content { float: left; max-width: 895px; margin-top: 17px; *zoom: 1; }
-@media only screen and (max-width: 1181px) { .content { max-width: 100%; } }
 .content:after { content: " "; display: table; clear: both; }
+@media only screen and (max-width: 1181px) { .content { max-width: 100%; } }
 .content__item, .content__item--bottom { width: 100%; margin-bottom: 12px; padding: 10px 0; background-color: #f8f9f9; border: 1px solid #e9ebeb; *zoom: 1; }
 .content__item:after, .content__item--bottom:after { content: " "; display: table; clear: both; }
 .content__item--bottom { padding: 20px; }
@@ -186,7 +186,7 @@ body { font-family: "maven-reg", sans-serif; font-size: 14px; line-height: 1; }
 .content__lang p { vertical-align: middle; display: inline-block; padding-left: 8px; line-height: 30px; font-family: "maven-med", sans-serif; font-size: 24px; color: #747474; }
 .content__lang p span { font-family: "maven-reg", sans-serif; font-size: 18px; }
 .content__buy-price { position: absolute; right: 0; top: 23px; z-index: 1; width: 50%; height: 44px; border: 1px solid #e9ebeb; border-radius: 3px; padding-left: 40px; background-color: #fff; }
-.content__buy-price span { font-family: "maven-black", sans-serif; font-size: 36px; line-height: 44px; background: -webkit-linear-gradient(bottom, #2b83d6 0%, #3699f5 100%); background: -o-linear-gradient(bottom, #2b83d6 0%, #3699f5 100%); background: linear-gradient(to top, #2b83d6 0%, #3699f5 100%); -webkit-background-clip: text; color: transparent; }
+.content__buy-price span { font-family: "maven-black", sans-serif; font-size: 36px; line-height: 44px; background: -webkit-linear-gradient(bottom, #2b83d6 0%, #3699f5 100%); background: -o-linear-gradient(bottom, #2b83d6 0%, #3699f5 100%); background: linear-gradient(to top, #2b83d6 0%, #3699f5 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .content__article { width: 100%; padding: 25px 0; }
 .content__article p { font-family: "maven-reg", sans-serif; font-size: 14px; color: #747474; line-height: 1.2; }
 .content__article .price-img { width: 100%; display: inline-block; padding: 20px 0; text-align: center; }
@@ -196,7 +196,7 @@ body { font-family: "maven-reg", sans-serif; font-size: 14px; line-height: 1; }
 .content__name { font-family: "maven-med", sans-serif; font-size: 22px; color: #969696; line-height: 1.2; }
 .content__post { font-family: "maven-reg", sans-serif; font-size: 14px; color: #747474; line-height: 1.2; }
 
-.sidebar { float: right; max-width: 287px; margin: 17px 0 30px 18px; *zoom: 1; }
+.sidebar { float: right; max-width: 287px; margin: 17px 0 30px 18px; overflow: hidden; *zoom: 1; }
 .sidebar:after { content: " "; display: table; clear: both; }
 @media only screen and (max-width: 1200px) { .sidebar { width: 100%; margin: auto; float: none; } }
 @media only screen and (max-width: 600px) { .sidebar { max-width: none; margin-top: 19px; } }
